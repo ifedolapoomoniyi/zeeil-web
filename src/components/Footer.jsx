@@ -40,7 +40,7 @@ const Footer = () => {
 						width={100}
 					/>
 				</div>
-				<p className="text-white max-w-screen-lglg text-center">
+				<p className="text-white max-w-screen-lg text-center">
 					Fast, efficient, and always on time. We ensure your
 					shipments move at the speed of your business
 				</p>
@@ -56,20 +56,7 @@ const Footer = () => {
 						<ul className="space-y-6 py-5">
 							{footerLinks.map((link, index) => (
 								<li key={index}>
-									<Link
-										href={link.path}
-										className={
-											pathname == link.path
-												? " text-secondary p-2 px-4 m-auto"
-												: "p-2 hover:text-primary"
-										}
-									>
-										{link.title}
-									</Link>
-
-									{pathname == link.path && (
-										<div className="bg-secondary w-full h-4 rounded-3xl absolute -bottom-2"></div>
-									)}
+									<Link href={link.path}>{link.title}</Link>
 								</li>
 							))}
 						</ul>
