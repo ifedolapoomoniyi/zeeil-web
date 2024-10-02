@@ -35,7 +35,7 @@ const Navbar = () => {
 								href={link.path}
 								className={
 									pathname == link.path
-										? " text-secondary p-2 px-4 m-auto flex text-center w-24"
+										? " text-secondary p-2 px-2 m-auto flex text-center w-24"
 										: "p-2 hover:text-primary"
 								}
 							>
