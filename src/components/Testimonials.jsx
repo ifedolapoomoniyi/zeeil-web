@@ -3,7 +3,7 @@ import Image from "next/image";
 const Testimonials = ({ text, name, title, bg, color, avatar }) => {
 	return (
 		<div
-			className={`flex flex-col gap-5 bg-${bg} p-10 rounded-xl shadow-lg w-[420px] relative`}
+			className={`flex flex-col gap-5 bg-${bg} p-10 rounded-xl shadow-lg w-[420px] min-w-[270px] relative`}
 		>
 			{/* Absolute apostrophe top */}
 			{color === "secondary" ? (

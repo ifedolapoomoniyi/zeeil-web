@@ -9,7 +9,7 @@ const page = () => {
 
 			{/* Our story */}
 			<section className="max-w-[960px] p-8 md:p-10 m-10 lg:mx-auto bg-[#FFF8DE] rounded-2xl shadow-xl">
-				<h1 className="text-center font-bold text-5xl pb-9 px-4">
+				<h1 className="text-center font-bold text-3xl md:*:text-5xl pb-9 px-4">
 					Our Story
 				</h1>
 
@@ -57,7 +57,7 @@ const page = () => {
 			{/* Meet the team section */}
 
 			<section className="md:my-10 my-6 py-5">
-				<h2 className="text-center font-bold text-4xl p-3 py-7">
+				<h2 className="text-center font-bold text-2xl md:text-4xl p-3 py-7">
 					Meet The Team
 				</h2>
 				<div className="w-full">
@@ -72,21 +72,21 @@ const page = () => {
 			</section>
 
 			{/* metrics section */}
-			<section className="bg-[#FFF8DE] p-5 md:p-8 my-14 shadow-lg">
+			<section className="bg-[#FFF8DE] p-5">
 				<h2 className="text-xl text-center pb-5">
 					"We Grow by Delivering with Care"
 				</h2>
-				<div className="flex flex-row gap-4 justify-between m-auto max-w-[1000px]">
+				<div className="flex flex-col items-center justify-center md:flex-row gap-14 md:gap-10 md:justify-between m-auto max-w-[1000px] py-3">
 					<div className="flex flex-col gap-3">
-						<h3 className="text-5xl font-bold">25+</h3>
+						<h3 className="text-3xl md:*:text-5xl font-bold">25+</h3>
 						<p className="text-sm">States in operation</p>
 					</div>
 					<div className="flex flex-col gap-3">
-						<h3 className="text-5xl font-bold">50k+</h3>
+						<h3 className="text-3xl md:*:text-5xl font-bold">50k+</h3>
 						<p className="text-sm">Businesses served</p>
 					</div>
 					<div className="flex flex-col gap-3">
-						<h3 className="text-5xl font-bold">12k+</h3>
+						<h3 className="text-3xl md:*:text-5xl font-bold">12k+</h3>
 						<p className="text-sm">Vehicles in operation</p>
 					</div>
 				</div>
@@ -94,7 +94,7 @@ const page = () => {
 
 			{/* Who we are */}
 			<section className="max-w-[960px] p-8 md:p-10 m-10 my-20 lg:mx-auto bg-primary rounded-2xl shadow-xl text-white">
-				<h1 className="text-center font-bold text-5xl pb-9 px-4">
+				<h1 className="text-center font-bold text-3xl md:*:text-5xl pb-9 px-4">
 					Who we are
 				</h1>
 
@@ -150,7 +150,7 @@ const page = () => {
 			{/* mission and vision section */}
 			<section className="max-w-[740px] lg:mx-auto m-10 p-5 space-y-20">
 				<div>
-					<h2 className="text-4xl font-bold text-center my-8">
+					<h2 className="text-2xl md:text-4xl font-bold text-center my-8">
 						Vision
 					</h2>
 					<p>
@@ -163,7 +163,7 @@ const page = () => {
 				</div>
 
 				<div>
-					<h2 className="text-4xl font-bold text-center my-8">
+					<h2 className="text-2xl md:text-4xl font-bold text-center my-8">
 						Mission
 					</h2>
 					<p>
@@ -178,9 +178,8 @@ const page = () => {
 				</div>
 			</section>
 
-
-      {/* Footer */}
-      <Footer/>
+			{/* Footer */}
+			<Footer />
 		</main>
 	);
 };

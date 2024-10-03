@@ -40,7 +40,7 @@ const Footer = () => {
 						width={100}
 					/>
 				</div>
-				<p className="text-white max-w-screen-lg text-center">
+				<p className="text-white max-w-screen-lg text-center text-sm md:text-base font-light py-2">
 					Fast, efficient, and always on time. We ensure your
 					shipments move at the speed of your business
 				</p>
@@ -48,7 +48,7 @@ const Footer = () => {
 
 			<div className="bg-secondary">
 				{/* Main footer */}
-				<div className="flex flex-row gap-5 justify-center p-8 pt-12 max-w-screen-xl m-auto border-primary border-b-2">
+				<div className="flex md:flex-row flex-col gap-5 justify-center p-5 md:p-8 pt-12 max-w-screen-xl m-auto border-primary border-b-2">
 					<div className="flex-1">
 						<div className="text-lg text-primary font-bold">
 							Company
@@ -124,7 +124,7 @@ const Footer = () => {
 						/>
 					</div>
 
-					<div className="flex flex-row gap-5 justify-between">
+					<div className="flex flex-col text-sm md:text-base md:flex-row gap-5 justify-between py-2">
 						<div>Terms || Privacy policy</div>
 						<div>
 							Copyright @2024 Zeeil Logistics. All rights

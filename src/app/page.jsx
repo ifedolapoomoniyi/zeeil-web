@@ -11,9 +11,9 @@ export default function Home() {
 			<Navbar />
 
 			{/* Hero section */}
-			<section className="flex flex-row gap-5 h-screen items-center max-w-screen-xl md:p-7 p-5 justify-center m-auto relative overflow-y-clip">
-				<div className="flex-1 mb-auto ">
-					<h1 className="font-bold text-5xl py-5 pt-10 leading-tight">
+			<section className="flex flex-row flex-wrap gap-5 h-screen items-center max-w-screen-xl md:p-7 p-5 justify-center m-auto relative overflow-y-clip">
+				<div className="flex-1 mb-auto min-w-[300px] sm:min-w-[400px]">
+					<h1 className="font-bold text-3xl md:text-5xl py-5 pt-10 leading-tight">
 						Swift, Secure, and Reliable{" "}
 						<span className="text-secondary">
 							Logistics Solutions
@@ -34,12 +34,14 @@ export default function Home() {
 						Get a quote now
 					</Button>
 
+
+					{/* design element */}
 					<Image
 						src="/hero-element.png"
 						alt="hero element"
 						width={500}
 						height={500}
-						className="absolute -left-[150px] -bottom-[230px]"
+						className="absolute -left-[150px] -bottom-[230px] w-64 md:w-auto"
 					/>
 				</div>
 
@@ -59,7 +61,7 @@ export default function Home() {
 				<h2 className="text-xl text-center pb-5">
 					"We Grow by Delivering with Care"
 				</h2>
-				<div className="flex flex-row gap-4 justify-between m-auto max-w-[1000px]">
+				<div className="flex flex-col items-center justify-center md:flex-row gap-14 md:gap-10 md:justify-between m-auto max-w-[1000px] py-3">
 					<div className="flex flex-col gap-3">
 						<h3 className="text-5xl font-bold">25+</h3>
 						<p className="text-sm">States in operation</p>
@@ -81,7 +83,7 @@ export default function Home() {
 					Why choose us?
 				</h3>
 
-				<div className="flex flex-row flex-wrap gap-10 max-w-screen-xl items-center m-auto justify-between">
+				<div className="flex flex-row flex-wrap gap-10 max-w-screen-xl items-center m-auto justify-center p-7 md:10">
 					<Benefits
 						text={
 							"Fast, efficient, and always on time. We ensure your shipments move at the speed of your business."
@@ -117,7 +119,7 @@ export default function Home() {
 					Testimonials
 				</h3>
 
-				<div className="flex flex-row gap-10 max-w-screen-xl m-auto justify-around my-14">
+				<div className="flex flex-row gap-20 md:gap-10 max-w-screen-xl m-auto justify-around my-14 flex-wrap p-5">
 					<Testimonials
 						text={`They handle our logistics with care
 and precision. We've never had
