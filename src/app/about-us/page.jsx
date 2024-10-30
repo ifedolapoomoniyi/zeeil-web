@@ -60,14 +60,16 @@ const page = () => {
 				<h2 className="text-center font-bold text-2xl md:text-4xl p-3 py-7">
 					Meet The Team
 				</h2>
-				<div className="w-full">
-					<Image
-						src={"/team-section.png"}
-						alt="team"
-						width={1500}
-						height={500}
-						className="object-cover w-full"
-					/>
+				<div className="overflow-x-scroll w-full no-scrollbar">
+					<div className="w-[1200px] md:w-[1500px] md:h-[500px]">
+						<Image
+							src="/team-section.png"
+							alt="team"
+							width={1500}
+							height={500}
+							className="object-cover"
+						/>
+					</div>
 				</div>
 			</section>
 
@@ -78,15 +80,21 @@ const page = () => {
 				</h2>
 				<div className="flex flex-col items-center justify-center md:flex-row gap-14 md:gap-10 md:justify-between m-auto max-w-[1000px] py-3">
 					<div className="flex flex-col gap-3">
-						<h3 className="text-3xl md:*:text-5xl font-bold">25+</h3>
+						<h3 className="text-3xl md:*:text-5xl font-bold">
+							25+
+						</h3>
 						<p className="text-sm">States in operation</p>
 					</div>
 					<div className="flex flex-col gap-3">
-						<h3 className="text-3xl md:*:text-5xl font-bold">50k+</h3>
+						<h3 className="text-3xl md:*:text-5xl font-bold">
+							50k+
+						</h3>
 						<p className="text-sm">Businesses served</p>
 					</div>
 					<div className="flex flex-col gap-3">
-						<h3 className="text-3xl md:*:text-5xl font-bold">12k+</h3>
+						<h3 className="text-3xl md:*:text-5xl font-bold">
+							12k+
+						</h3>
 						<p className="text-sm">Vehicles in operation</p>
 					</div>
 				</div>
