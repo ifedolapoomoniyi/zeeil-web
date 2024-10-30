@@ -91,3 +91,17 @@ body {
 	-ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
 	scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
+
+/* Product page gradient */
+.custom-gradient {
+	background-image: linear-gradient(
+		to bottom,
+		transparent 0%,
+		rgba(255, 248, 222, 0.8) 35%,
+		rgba(255, 248, 222, 1) 40%,
+		rgba(255, 248, 222, 1) 55%,
+		rgba(255, 248, 222, 0.8) 65%,
+		transparent 95% /* End transparent */
+	);
+}
+
