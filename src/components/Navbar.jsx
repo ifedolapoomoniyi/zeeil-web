@@ -56,7 +56,7 @@ const Navbar = () => {
 				className={`text-white md:max-w-screen-xl flex flex-col h-screen md:flex-row md:justify-between font-semibold px-4 md:h-16  md:items-center md:m-auto w-[300px] md:w-auto bg-primary absolute top-0 z-10 md:static ${
 					isNavOpen
 						? "left-0"
-						: "-left-[80%] transition-all duration-5004 duration-1000"
+						: "-left-[90%] transition-all duration-5004 duration-1000"
 				}`}
 			>
 				<div className="md:w-[300px] lg:w-[500px]">
