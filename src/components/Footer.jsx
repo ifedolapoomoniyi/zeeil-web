@@ -152,7 +152,7 @@ const Footer = () => {
 							<a href="https://www.instagram.com/zeeiltech" target="blank">
 								<FaInstagram />
 							</a>
-							<a href="">
+							<a href="https://www.youtube.com/@zeeiltech">
 								<FaYoutube />
 							</a>
 						</div>
