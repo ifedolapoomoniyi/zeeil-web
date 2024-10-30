@@ -83,13 +83,20 @@ const Footer = () => {
 							<li className="space-y-3">
 								<div className="font-semibold">Head Office</div>{" "}
 								<address>
-									No 95 Ikorodu Road, P.O Box 1068, Umudim,
-									Ado road, Ekiti State
+									ISA/211, Isaba, Adj Ile-Atora Junction, P.O
+									Box 370224, Off Federal University
+									Oye-Ekiti, Ikole Campus,
+									Ikole-Ekiti, Ekiti State.
 								</address>
-								<a href="">+234 701 2233 444</a>
+								<a
+									href="tel:+2348120217723"
+									className="pt-2 block underline"
+								>
+									+234 812 021 7723
+								</a>
 							</li>
 
-							<li className="space-y-3">
+							{/* <li className="space-y-3">
 								<div className="font-semibold">
 									Lagos Office
 								</div>{" "}
@@ -109,7 +116,7 @@ const Footer = () => {
 									1570 Enugu, Enugu State.
 								</address>
 								<a href="">+234 701 2233 444</a>
-							</li>
+							</li> */}
 						</ul>
 					</div>
 				</div>
@@ -131,16 +138,18 @@ const Footer = () => {
 							reseverd.
 						</div>
 						<div className="flex flex-row gap-5 text-xl">
-							<a href="">
+							<a href="https://x.com/zeeilTech">
 								<FaTwitter />
 							</a>
-							<a href="">
+							{/* <a href="">
 								<FaFacebook />
 							</a>
-							<a href="">
+							*/}
+							
+							<a href="https://www.linkedin.com/company/zeeil-technologies-ltd/">
 								<FaLinkedin />
 							</a>
-							<a href="">
+							<a href="https://www.instagram.com/zeeiltech" target="blank">
 								<FaInstagram />
 							</a>
 							<a href="">
