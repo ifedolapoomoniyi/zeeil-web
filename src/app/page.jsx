@@ -1,13 +1,22 @@
+"use client"
+
 import Benefits from "@/components/Benefits";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import { FaApple, FaGooglePlay } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 export default function Home() {
 	return (
-		<div>
+		<motion.div
+			initial={{ opacity: 0, x: 100 }}
+			animate={{ opacity: 1, x: 0 }}
+			exit={{ opacity: 0, x: -100 }}
+		>
 			<Navbar />
 
 			{/* Hero section */}
@@ -31,9 +40,8 @@ export default function Home() {
 						variant={"secondary"}
 						className={"my-4 text-lg px-10"}
 					>
-						Get a quote now
+						<Link href="/products">Learn more</Link>
 					</Button>
-
 
 					{/* design element */}
 					<Image
@@ -45,14 +53,40 @@ export default function Home() {
 					/>
 				</div>
 
-				<div className="">
+				<div className="my-4">
 					<Image
-						src="/amico.png"
+						src="/3-phones-nobg.png"
 						alt="hero"
 						width={600}
 						height={600}
 						className="h-full"
 					/>
+					<div className="space-y-4 mb-2 flex flex-col items-center justify-center">
+						<h2 className="text-5xl font-bold flex flex-row gap-2 text-secondary text-pretty">
+							Available<span className="text-primary">Soon</span>
+						</h2>
+						<div className="flex flex-col gap-2 items-start">
+							<button className="border bg-black text-white p-2 rounded-md flex gap-2 items-center w-56">
+								<FaGooglePlay className="text-4xl" />
+								<div>
+									<div className="text-xs font-light">
+										Soon to be available on
+									</div>
+									<div className="text-lg">Google Play</div>
+								</div>
+							</button>
+
+							<button className="border bg-black text-white p-2 rounded-md flex gap-2 items-center w-56">
+								<FaApple className="text-5xl" />
+								<div>
+									<div className="text-xs font-light">
+										Soon to be available on
+									</div>
+									<div className="text-lg">App Store</div>
+								</div>
+							</button>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -146,9 +180,7 @@ of the way. Truly reliable."`}
 				</div>
 			</section>
 
-
-
-			<Footer/>
-		</div>
+			<Footer />
+		</motion.div>
 	);
 }
