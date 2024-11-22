@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import AnimatedText from "@/components/AnimatedText";
 
 const page = () => {
 	return (
@@ -17,50 +17,35 @@ const page = () => {
 				exit={{ opacity: 0, x: -100 }}
 			>
 				{/* Our story */}
-				<section className="max-w-[960px] p-8 md:p-10 m-10 lg:mx-auto bg-[#FFF8DE] rounded-2xl shadow-xl">
-					<h1 className="text-center font-bold text-3xl md:*:text-5xl pb-9 px-4">
+				<section className="max-w-[960px] p-8 md:p-10 m-6 lg:mx-auto bg-[#FFF8DE] rounded-2xl shadow-xl">
+					<h1 className="text-center font-bold text-3xl md:text-5xl pb-9 px-3">
 						Our Story
 					</h1>
 
 					<div className="space-y-5">
-						<p>
-							At Zeeil, our journey began with a clear vision: to
-							create a seamless, secure, and innovative logistics
-							platform that adapts to the ever-evolving needs of
-							businesses and individuals alike. Founded with the
-							mission of simplifying last-mile delivery, we set
-							out to build a user-friendly system that combines
-							efficiency with cutting-edge technology.
-						</p>
+						<AnimatedText
+							text={
+								"At Zeeil, our journey began with a clear vision: to create a seamless, secure, and innovative logistics platform that adapts to the ever-evolving needs of businesses and individuals alike. Founded with the mission of simplifying last-mile delivery, we set out to build a user-friendly system that combines efficiency with cutting-edge technology."
+							}
+						/>
 
-						<p>
-							Starting with the basics, we developed a platform
-							that allows users to easily place and manage orders
-							while ensuring secure transactions and seamless
-							communication between buyers, vendors, and delivery
-							agents. As we grew, we integrated real-time tracking
-							and GPS technology, enhancing transparency and
-							allowing customers to monitor their deliveries at
-							every stage.
-						</p>
+						<AnimatedText
+							text={
+								"						Starting with the basics, we developed a platform that allows users to easily place and manage orders while ensuring secure transactions and seamless communication between buyers, vendors, and delivery agents. As we grew, we integrated real-time tracking and GPS technology, enhancing transparency and allowing customers to monitor their deliveries at every stage."
+							}
+						/>
 
-						<p>
-							Our commitment to innovation led us to expand our
-							services beyond logistics. We introduced the Zeeil
-							Market Square, providing users with a broad range of
-							goods from diverse markets, and our unique
-							peer-to-peer marketplace allowed individuals to buy
-							and sell personal items with ease. We also
-							implemented an escrow system, securing transactions
-							and fostering trust between buyers and sellers.
-						</p>
-						<p>
-							At Zeeil, we believe that our success is driven by
-							our commitment to providing reliable, secure, and
-							innovative logistics solutions. We grow because we
-							care, and we are dedicated to delivering excellence,
-							one shipment at a time.
-						</p>
+						<AnimatedText
+							text={
+								"Our commitment to innovation led us to expand our services beyond logistics. We introduced the Zeeil Market Square, providing users with a broad range of goods from diverse markets, and our unique peer-to-peer marketplace allowed individuals to buy and sell personal items with ease. We also implemented an escrow system, securing transactions and fostering trust between buyers and sellers."
+							}
+						/>
+
+						<AnimatedText
+							text={
+								"At Zeeil, we believe that our success is driven by our commitment to providing reliable, secure, and innovative logistics solutions. We grow because we care, and we are dedicated to delivering excellence, one shipment at a time."
+							}
+						/>
 					</div>
 				</section>
 
@@ -111,59 +96,39 @@ const page = () => {
 				</section>
 
 				{/* Who we are */}
-				<section className="max-w-[960px] p-8 md:p-10 m-10 my-20 lg:mx-auto bg-primary rounded-2xl shadow-xl text-white">
-					<h1 className="text-center font-bold text-3xl md:*:text-5xl pb-9 px-4">
+				<section className="max-w-[960px] p-8 md:p-10 m-6 my-20 lg:mx-auto bg-primary rounded-2xl shadow-xl text-white">
+					<h1 className="text-center font-bold text-3xl md:*:text-5xl pb-9 px-3">
 						Who we are
 					</h1>
 
 					<div className="space-y-5">
-						<p>
-							At Zeeil, we are a dedicated team of logistics
-							enthusiasts committed to transforming the way goods
-							are delivered. Founded on the principles of
-							innovation, reliability, and customer-centricity, we
-							strive to create a logistics platform that meets the
-							diverse needs of our clients.
-						</p>
+						<AnimatedText
+							text={
+								"At Zeeil, we are a dedicated team of logistics enthusiasts committed to transforming the way goods are delivered. Founded on the principles of innovation, reliability, and customer-centricity, we strive to create a logistics platform that meets the diverse needs of our clients."
+							}
+						/>
 
-						<p>
-							Our journey began with a focus on last-mile
-							delivery, where we recognized the challenges faced
-							by businesses and individuals in accessing efficient
-							logistics solutions. With a strong emphasis on
-							technology and user experience, we built a platform
-							that simplifies the ordering process, enhances
-							communication between users, and ensures secure
-							transactions.
-						</p>
+						<AnimatedText
+							text={
+								"Our journey began with a focus on last-mile delivery, where we recognized the challenges facedby businesses and individuals in accessing efficient logistics solutions. With a strong emphasis on technology and user experience, we built a platform that simplifies the ordering process, enhances communication between users, and ensures secure transactions."
+							}
+						/>
 
-						<p>
-							We believe that effective logistics goes beyond just
-							moving packages; it’s about building trust and
-							relationships. Our team is passionate about
-							providing real-time tracking, enabling our users to
-							stay informed about their deliveries at every stage.
-							We understand the importance of transparency and
-							work tirelessly to enhance our platform with
-							features that prioritize user satisfaction.
-						</p>
-						<p>
-							As we grow, our vision expands. We are not only
-							committed to enhancing logistics services but also
-							to fostering an inclusive marketplace where
-							businesses and individuals can thrive. Through
-							innovative solutions such as the Zeeil Market Square
-							and peer-to-peer selling, we empower users to engage
-							in seamless transactions while promoting community
-							interaction.
-						</p>
-						<p>
-							At Zeeil, we embrace change and continually adapt to
-							meet the evolving landscape of logistics. Our
-							mission is to deliver excellence and exceed
-							expectations, ensuring that every shipment
-							contributes to the success of our clients.
-						</p>
+						<AnimatedText
+							text={
+								"We believe that effective logistics goes beyond just moving packages; it’s about building trust and relationships. Our team is passionate about providing real-time tracking, enabling our users to stay informed about their deliveries at every stage. We understand the importance of transparency and work tirelessly to enhance our platform with features that prioritize user satisfaction"
+							}
+						/>
+
+						<AnimatedText
+							text="As we grow, our vision expands. We are not only committed to enhancing logistics services but also to fostering an inclusive marketplace where businesses and individuals can thrive. Through innovative solutions such as the Zeeil Market Square and peer-to-peer selling, we empower users to engage in seamless transactions while promoting community interaction."
+						/>
+
+						<AnimatedText
+							text={
+								"At Zeeil, we embrace change and continually adapt to meet the evolving landscape of logistics. Our mission is to deliver excellence and exceed expectations, ensuring that every shipment contributes to the success of our clients."
+							}
+						/>
 					</div>
 				</section>
 

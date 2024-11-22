@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Benefits from "@/components/Benefits";
 import Footer from "@/components/Footer";
@@ -8,7 +8,29 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { FaApple, FaGooglePlay } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { benefitsData } from "@/lib/data";
+import { testimonials } from "@/lib/data";
+
+const container = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.3,
+		},
+	},
+};
+
+const containerVariants = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.2, // Adds delay between child animations
+		},
+	},
+};
 
 export default function Home() {
 	return (
@@ -101,12 +123,12 @@ export default function Home() {
 						<p className="text-sm">States in operation</p>
 					</div>
 					<div className="flex flex-col gap-3">
-						<h3 className="text-5xl font-bold">50k+</h3>
+						<h3 className="text-5xl font-bold">50+</h3>
 						<p className="text-sm">Businesses served</p>
 					</div>
 					<div className="flex flex-col gap-3">
-						<h3 className="text-5xl font-bold">12k+</h3>
-						<p className="text-sm">Vehicles in operation</p>
+						<h3 className="text-5xl font-bold">5+</h3>
+						<p className="text-sm">Riders</p>
 					</div>
 				</div>
 			</section>
@@ -116,35 +138,23 @@ export default function Home() {
 				<h3 className="text-2xl font-semibold py-10 text-center">
 					Why choose us?
 				</h3>
-
-				<div className="flex flex-row flex-wrap gap-10 max-w-screen-xl items-center m-auto justify-center p-7 md:10">
-					<Benefits
-						text={
-							"Fast, efficient, and always on time. We ensure your shipments move at the speed of your business."
-						}
-						color={"white"}
-						header={"Swift"}
-						icon={"/icons/icon2.png"}
-					/>
-
-					<Benefits
-						text={
-							"Count on us for consistent, dependable deliveries that keep your business moving forward."
-						}
-						color={"secondary"}
-						header={"Reliable"}
-						icon={"/icons/security-lock.png"}
-					/>
-
-					<Benefits
-						text={
-							"From pick-up to delivery, your shipments are safeguarded with the highest standards of security and care."
-						}
-						color={"white"}
-						header={"Secured"}
-						icon={"/icons/icon1.png"}
-					/>
-				</div>
+				<motion.div
+					className="flex flex-row flex-wrap gap-10 max-w-screen-xl items-center m-auto justify-center p-7 md:10"
+					variants={container}
+					initial="hidden"
+					whileInView="show" // Triggers animations for all children when in view
+					viewport={{ once: true, amount: 0.3 }} // Ensures animations trigger once when 30% is visible
+				>
+					{benefitsData.map((benefit, index) => (
+						<Benefits
+							key={index}
+							text={benefit.text}
+							color={benefit.color}
+							header={benefit.header}
+							icon={benefit.icon}
+						/>
+					))}
+				</motion.div>
 			</section>
 
 			{/* Testimonials */}
@@ -152,32 +162,25 @@ export default function Home() {
 				<h3 className="text-2xl font-bold py-10 text-center">
 					Testimonials
 				</h3>
-
-				<div className="flex flex-row gap-20 md:gap-10 max-w-screen-xl m-auto justify-around my-14 flex-wrap p-5">
-					<Testimonials
-						text={`They handle our logistics with care
-and precision. We've never had
-smoother operations—swift, secure, 
-and stress-free!`}
-						name={"Sarah M."}
-						title={"Retaill Business Owner"}
-						bg={"primary"}
-						color={"secondary"}
-						avatar={"/avatar.png"}
-					/>
-
-					<Testimonials
-						text={`"Exceptional service! Our shipments
-always arrive on time, and the tracking
-system keeps us informed every step
-of the way. Truly reliable."`}
-						name={"Sarah M."}
-						title={"E-commerce Enterpreneur"}
-						bg={"secondary"}
-						color={"primary"}
-						avatar={"/avatar.png"}
-					/>
-				</div>
+				<motion.div
+					className="flex flex-row gap-20 md:gap-10 max-w-screen-xl m-auto justify-around my-14 flex-wrap p-5"
+					variants={containerVariants} // Apply container animation
+					initial="hidden"
+					whileInView="show" // Triggers animations when in view
+					viewport={{ once: true, amount: 0.3 }} // Animation triggers when 30% is visible
+				>
+					{testimonials.map((testimonial, index) => (
+						<Testimonials
+							key={index}
+							text={testimonial.text}
+							name={testimonial.name}
+							title={testimonial.title}
+							bg={testimonial.bg}
+							color={testimonial.color}
+							avatar={testimonial.avatar}
+						/>
+					))}
+				</motion.div>{" "}
 			</section>
 
 			<Footer />
