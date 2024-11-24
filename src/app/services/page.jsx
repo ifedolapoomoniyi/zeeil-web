@@ -9,7 +9,12 @@ const page = () => {
 	return (
 		<main>
 			<Navbar />
-			<motion.div>
+
+			<motion.div
+				initFial={{ opacity: 0, x: 100 }}
+				animate={{ opacity: 1, x: 0 }}
+				exit={{ opacity: 0, x: -100 }}
+			>
 				{/* services hero */}
 				<section className="bg-servicesHero h-[92vh] bg-cover flex flex-col items-center justify-center p-4">
 					<div className="rounded-2xl  backdrop-blur-lg max-w-[900px] mx-auto md:p-10 p-6 bg-white/35 border border-white">

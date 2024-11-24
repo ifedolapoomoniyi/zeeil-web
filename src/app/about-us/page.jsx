@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import AnimatedText from "@/components/AnimatedText";
+import CountUp from "react-countup";
 
 const page = () => {
 	return (
@@ -74,24 +75,37 @@ const page = () => {
 						"We Grow by Delivering with Care"
 					</h2>
 					<div className="flex flex-col items-center justify-center md:flex-row gap-14 md:gap-10 md:justify-between m-auto max-w-[1000px] py-3">
-						<div className="flex flex-col gap-3">
-							<h3 className="text-3xl md:*:text-5xl font-bold">
-								25+
+					<div className="flex flex-col gap-3 items-center">
+						<h3 className="text-5xl font-bold">1</h3>
+						<p className="text-sm">State in operation</p>
+					</div>
+					<div className="flex flex-col gap-3 items-center">
+						<h3 className="text-5xl font-bold">
+							<CountUp
+								start={0}
+								end={50}
+								duration={2}
+								suffix="+"
+								enableScrollSpy
+								scrollSpyDelay={100}
+							/>
+						</h3>
+						<p className="text-sm">Businesses served</p>
+					</div>
+					<div className="flex flex-col gap-3 items-center">
+						<h3 className="text-5xl font-bold">
+						<CountUp
+								start={0}
+								end={5}
+								duration={2}
+								suffix="+"
+								enableScrollSpy
+								scrollSpyDelay={100}
+							/>
 							</h3>
-							<p className="text-sm">States in operation</p>
-						</div>
-						<div className="flex flex-col gap-3">
-							<h3 className="text-3xl md:*:text-5xl font-bold">
-								50k+
-							</h3>
-							<p className="text-sm">Businesses served</p>
-						</div>
-						<div className="flex flex-col gap-3">
-							<h3 className="text-3xl md:*:text-5xl font-bold">
-								12k+
-							</h3>
-							<p className="text-sm">Vehicles in operation</p>
-						</div>
+						<p className="text-sm">Riders</p>
+					</div>
+
 					</div>
 				</section>
 

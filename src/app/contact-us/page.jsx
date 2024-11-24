@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 
-
 const page = () => {
 	const initialValues = {
 		firstName: "",
@@ -38,10 +37,10 @@ const page = () => {
 			<Navbar />
 
 			<motion.div
-			
-			initial={{ opacity: 0, x: 100 }}
-			animate={{ opacity: 1, x: 0 }}
-			exit={{ opacity: 0, x: -100 }}>
+				initFial={{ opacity: 0, x: 100 }}
+				animate={{ opacity: 1, x: 0 }}
+				exit={{ opacity: 0, x: -100 }}
+			>
 				{/* Contact us page */}
 				<section className="flex flex-row gap-4 p-5 min-h-screen mb-10">
 					<div className="flex-1 max-w-[700px] m-auto">
