@@ -11,6 +11,7 @@ import { FaApple, FaGooglePlay } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 import { benefitsData } from "@/lib/data";
 import { testimonials } from "@/lib/data";
+import CountUp from "react-countup";
 
 const container = {
 	hidden: { opacity: 0 },
@@ -32,6 +33,17 @@ const containerVariants = {
 	},
 };
 
+const bounceVariants = {
+	animate: {
+		y: [0, -10, 0], // Bounce up and down
+		transition: {
+			duration: 2,
+			repeat: Infinity,
+			repeatType: "mirror",
+		},
+	},
+};
+
 export default function Home() {
 	return (
 		<motion.div
@@ -42,7 +54,7 @@ export default function Home() {
 			<Navbar />
 
 			{/* Hero section */}
-			<section className="flex flex-row flex-wrap gap-5 h-screen items-center max-w-screen-xl md:p-7 p-5 justify-center m-auto relative overflow-y-clip">
+			<section className="flex flex-row flex-wrap gap-5 min-h-screen items-center max-w-screen-xl md:p-7 p-5 justify-center m-auto relative overflow-y-clip">
 				<div className="flex-1 mb-auto min-w-[300px] sm:min-w-[400px]">
 					<h1 className="font-bold text-3xl md:text-5xl py-5 pt-10 leading-tight">
 						Swift, Secure, and Reliable{" "}
@@ -75,16 +87,23 @@ export default function Home() {
 					/>
 				</div>
 
-				<div className="my-4">
-					<Image
-						src="/3-phones-nobg.png"
-						alt="hero"
-						width={600}
-						height={600}
+				<motion.div className="my-4">
+					<motion.div
+						variants={bounceVariants}
+						animate="animate"
 						className="h-full"
-					/>
+					>
+						<Image
+							src="/3-phones-nobg.png"
+							alt="hero"
+							width={600}
+							height={600}
+							className="h-full"
+						/>
+					</motion.div>
+
 					<div className="space-y-4 mb-2 flex flex-col items-center justify-center">
-						<h2 className="text-5xl font-bold flex flex-row gap-2 text-secondary text-pretty">
+						<h2 className="text-2xl md:text-5xl font-bold flex flex-row gap-2 text-secondary text-pretty">
 							Available<span className="text-primary">Soon</span>
 						</h2>
 						<div className="flex flex-col gap-2 items-start">
@@ -109,7 +128,7 @@ export default function Home() {
 							</button>
 						</div>
 					</div>
-				</div>
+				</motion.div>
 			</section>
 
 			{/* metrics section */}
@@ -118,16 +137,34 @@ export default function Home() {
 					"We Grow by Delivering with Care"
 				</h2>
 				<div className="flex flex-col items-center justify-center md:flex-row gap-14 md:gap-10 md:justify-between m-auto max-w-[1000px] py-3">
-					<div className="flex flex-col gap-3">
-						<h3 className="text-5xl font-bold">25+</h3>
-						<p className="text-sm">States in operation</p>
+					<div className="flex flex-col gap-3 items-center">
+						<h3 className="text-5xl font-bold">1</h3>
+						<p className="text-sm">State in operation</p>
 					</div>
-					<div className="flex flex-col gap-3">
-						<h3 className="text-5xl font-bold">50+</h3>
+					<div className="flex flex-col gap-3 items-center">
+						<h3 className="text-5xl font-bold">
+							<CountUp
+								start={0}
+								end={50}
+								duration={2}
+								suffix="+"
+								enableScrollSpy
+								scrollSpyDelay={100}
+							/>
+						</h3>
 						<p className="text-sm">Businesses served</p>
 					</div>
-					<div className="flex flex-col gap-3">
-						<h3 className="text-5xl font-bold">5+</h3>
+					<div className="flex flex-col gap-3 items-center">
+						<h3 className="text-5xl font-bold">
+						<CountUp
+								start={0}
+								end={5}
+								duration={2}
+								suffix="+"
+								enableScrollSpy
+								scrollSpyDelay={100}
+							/>
+							</h3>
 						<p className="text-sm">Riders</p>
 					</div>
 				</div>
