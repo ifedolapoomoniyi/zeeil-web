@@ -135,7 +135,7 @@ const Footer = () => {
 						<div>Terms || Privacy policy</div>
 						<div>
 							Copyright @2024 Zeeil Logistics. All rights
-							reseverd.
+							reserved.
 						</div>
 						<div className="flex flex-row gap-5 text-xl">
 							<a href="https://x.com/zeeilTech">
